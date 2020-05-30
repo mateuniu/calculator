@@ -1,0 +1,11 @@
+.form__section__button-info {
+  @extend %button-placeholder;
+
+  width: 20px;
+  height: 20px;
+
+  margin: 4px;
+
+  border: solid 1px #c7c2c2;
+  border-radius: 50%;
+}

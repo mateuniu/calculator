@@ -1,0 +1,19 @@
+.output-section {
+  visibility: hidden;
+  position: fixed;
+
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  
+  margin: auto;
+  padding: 8px;
+
+  background-color: white;
+
+  border-top: solid 1px #8a8888;
+
+  opacity: 0;
+
+  transition: all .5s ease;
+}

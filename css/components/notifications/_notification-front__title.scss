@@ -1,0 +1,46 @@
+.notification-front__title {
+  text-align: center;
+  width: auto;
+  height: auto;
+
+  margin: .1em auto;
+  padding: 0 4em;
+  
+  font-family: $title-span;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 54px;
+  text-shadow: 0 0 4px #011f30;
+
+  text-align: center;
+
+  color: #00334e;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #b43939;
+
+  border: solid 2px #b43939;
+
+  border-radius: 6px;
+  
+  opacity: .4;
+  
+  box-shadow: 0 0 2px #011f30;
+
+@media (min-width: $large) {
+  padding: 0 6px;
+
+  font-size: 86px;
+  text-shadow: 0 0 4px #011f30;
+
+  box-shadow: 0 0 6px #011f30;
+}
+@media (min-width: $huge) {
+  padding: 0 10px;
+
+  font-size: 96px;
+  text-shadow: 0 0 6px #011f30;
+
+  box-shadow: 0 0 8px #011f30;
+}
+}

@@ -1,0 +1,33 @@
+.form__section__input {
+  display: inline-block;
+  background-color: inherit;
+
+  margin: 0 8px;
+  padding: 4px 6px;
+
+  border: solid 1px #e0e0e0;
+  border-radius: 4px;
+
+  font-family: $title-span;
+  font-style: normal;
+  font-weight: 500;
+
+  color: #535353;
+
+  transition: all .4s;
+}
+
+.form__section__input:focus {
+  outline: none;
+  background-color: #00334e46;
+  
+
+  transition: all .4s;
+}
+
+.form__section__input::placeholder {
+padding: 4px 4px 2px 4px;
+  color: #797575;
+
+  font-weight: 400;
+}

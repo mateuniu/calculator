@@ -1,0 +1,55 @@
+// BASE //
+@import 
+  'base/base',
+  'base/typography',
+  'base/animations';
+
+// UTILITIES //
+@import
+  'utilities/breakpoints',
+  'utilities/button-placeholder';
+  
+
+// LAYOUT //
+@import
+  'layout/header/header',
+  'layout/header/header__titles-section',
+
+  'layout/main/main',
+
+  'layout/form/form',
+  'layout/form/form-container',
+  'layout/form/form-section',
+  'layout/form/form__section__container',
+  'layout/form/form__section__label',
+  'layout/form/form__section__input',
+  'layout/form/form__section__input--unfilled',
+  'layout/form/form__submit-btn',
+  'layout/form/form__section__button-container',
+  'layout/form/form__close-output-button',
+  'layout/form/form__section__button-info',
+
+  'layout/output/output-section',
+  'layout/output/output-section__article',
+  'layout/output/output-section--show',
+
+  'layout/notifications/notification-front',
+  'layout/notifications/notification-back',
+
+  'layout/footer';
+
+// COMPONENTS //
+@import 
+  'components/header/title',
+  'components/header/title__span',
+  'components/header/subtitle',
+  'components/header/subtitle__span',
+
+  'components/notifications/notification-front__title',
+  'components/notifications/notification-front__span',
+  'components/notifications/notification--visible',
+
+  'components/output/output__paragraph',
+  'components/output/output__paragraph__span',
+
+  'components/footer/footer__span';

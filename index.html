@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kalkulator</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Asap:400,500,600|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__titles-section">
+        <h1 class="title">
+          <span class="title__span" id="title__span">
+            kalkulator
+          </span>
+        </h1>
+        <h2 class="subtitle">
+          <span class="subtitle__span">
+            rentowności twojej firmy
+          </span>
+        </h2>
+      </section>
+    </header>
+
+    <main class="main">
+      <form id="form" class="form">
+        <section class="form__section__container">
+          <section class="form__section">
+            <label class="form__section__label" for="whole-time">
+              całkowita liczba godzin pracy w miesiącu
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="wholeTime"
+              id="whole-time"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="managing-time">
+              liczba godzin przeznaczonych na administrację
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="managingTime"
+              id="managing-time"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="development-time">
+              liczba godzin przeznaczonych na rozwój firmy
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="developmentTime"
+              id="development-time"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="hours-per-product">
+              liczba godzin przypadających na wytworzenie jednej sztuki produktu
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="hoursPerProduct"
+              id="hours-per-product"
+              class="form__section__input"
+            />
+          </section>
+        </section>
+        <section class="form__section__container">
+          <section class="form__section">
+            <label class="form__section__label" for="taxes">
+              podatki
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="taxes"
+              id="taxes"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="constant-cost">
+              koszty stałe
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="constantCost"
+              id="constant-cost"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="material-cost">
+              koszty materiałów
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="materialCost"
+              id="material-cost"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="delivery-cost">
+              koszt dostawy
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="deliveryCost"
+              id="delivery-cost"
+              class="form__section__input"
+            />
+          </section>
+          <section class="form__section">
+            <label class="form__section__label" for="getting-client-cost">
+              koszt pozyskania klienta
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="gettingClientCost"
+              id="getting-client-cost"
+              class="form__section__input"
+            />
+          </section>
+        </section>
+        <section class="form__section__container">
+          <section class="form__section">
+            <label class="form__section__label" for="product-price">
+              cena produktu
+            </label>
+            <button type="button" class="form__section__button-info" id="">
+              ?
+            </button>
+            <input
+              type="number"
+              name="productPrice"
+              id="product-price"
+              class="form__section__input"
+            />
+          </section>
+        </section>
+        <button type="submit" id="submit-btn" class="form__submit-btn">
+          oblicz
+        </button>
+      </form>
+      <section class="output-section" id="output-section">
+        <article class="output-section__article">
+          <p class="output__paragraph">
+            liczba produktów / miesiąc:
+            <span
+              id="products-per-month-output"
+              class="output__paragraph__span"
+            >
+            </span>
+          </p>
+          <p class="output__paragraph">
+            dochód brutto:
+            <span id="income-brutto-output" class="output__paragraph__span">
+            </span>
+          </p>
+          <p class="output__paragraph">
+            koszt prowadzenia działalności gospodarczej:
+            <span
+              id="running-company-costs-output"
+              class="output__paragraph__span"
+            >
+            </span>
+          </p>
+          <p class="output__paragraph">
+            dochód firmy netto:
+            <span id="income-netto-output" class="output__paragraph__span">
+            </span>
+          </p>
+        </article>
+        <button
+          type="button"
+          class="form__close-output-button"
+          id="saveAs-output-btn"
+        >
+          zapisz
+        </button>
+        <input
+          type="text"
+          name="name"
+          class="form__section__input"
+          autocomplete="off"
+        />
+        <button
+          type="button"
+          class="form__close-output-button"
+          id="close-output-btn"
+        >
+          zamknij
+        </button>
+      </section>
+    </main>
+
+    <section id="notification-back-ask" class="notification-back">
+      <article id="notification-front-ask" class="notification-front">
+        <div>
+          <h4 id="notification-front__title" class="notification-front__title">
+            ?
+          </h4>
+          <label id="notification-front__span" class="notification-front__span">
+          </label>
+          <form>
+            <legend>Czy chcesz przywrócić poprzednią sesję?</legend>
+            <button
+              type="button"
+              class="notification-front-ask-btn"
+              id="notification-front-ask-btn"
+              value="yes"
+            >
+              tak
+            </button>
+            <button
+              type="button"
+              class="notification-front-ask-btn"
+              id="notification-front-ask-btn"
+              value="no"
+            >
+              nie
+            </button>
+          </form>
+        </div>
+      </article>
+    </section>
+
+    <section id="notification-back" class="notification-back">
+      <article id="notification-front" class="notification-front">
+        <div>
+          <h4 id="notification-front__title" class="notification-front__title">
+            !
+          </h4>
+          <span id="notification-front__span" class="notification-front__span">
+            pole nie może być puste
+          </span>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span class="footer__span">
+        copyright: Mateusz Gajewski
+      </span>
+    </footer>
+    <script src="js/vendors.js"></script>
+    <script src="js/enterAnimations.js"></script>
+    <script src="js/restorePrevSesion.js"></script>
+    <script src="js/outputResults.js"></script>
+    <script src="js/popups.js"></script>
+    <script src="js/toggleOutput.js"></script>
+  </body>
+</html>

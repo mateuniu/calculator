@@ -1,0 +1,11 @@
+.subtitle {
+  width: 100%;
+  height: auto;
+  margin: 4px auto 0 auto;
+@media (min-width: $large) {
+  margin: 6px auto 0 auto;
+}
+@media (min-width: $huge) {
+  margin: 8px auto 0 auto;
+}
+}

@@ -1,0 +1,23 @@
+.subtitle__span {
+  display: block;
+  width: 100%;
+
+  padding-left: 10px;
+
+  font-family: $title-span;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  
+  color: #d6cfcf;
+@media (min-width: $large) {
+  padding-left: 16px;
+
+  font-size: 14px;
+}
+@media (min-width: $huge) {
+  padding-left: 20px;
+
+  font-size: 16px;
+}
+}

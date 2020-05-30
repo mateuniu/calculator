@@ -1,0 +1,27 @@
+%button-placeholder {
+  padding: 2px 4px;
+
+  font-family: $main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+
+  color: #6d6767;
+  background-color: inherit;
+  
+  outline: none;
+  border: solid 1px grey;
+
+  transition: .2s;
+  transition-delay: .1s;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00334e;
+    border: solid 1px #00334e;
+    color: #e9e1e1;
+    transition: .2s;
+    transition-delay: .05s;
+  }
+}

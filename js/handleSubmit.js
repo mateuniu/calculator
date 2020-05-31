@@ -17,6 +17,17 @@ function handleSubmit(e) {
   const materialCost = parseInt(e.currentTarget.materialCost.value);
   const deliveryCost = parseInt(e.currentTarget.deliveryCost.value);
 
+  const producingTime = () => wholeTime - managingTime - developmentTime;
+  const productsPerMonth = () => producingTime() - hoursPerProduct;
+  const incomBrutto = () => productsPerMonth() * productPrice;
+  const costOfRunningCompany = () => tax + constantCost;
+  const incomNetto = () =>
+    incomBrutto() -
+    costOfRunningCompany() -
+    gettingClientCost * productsPerMonth() -
+    materialCost * productsPerMonth() -
+    deliveryCost * productsPerMonth();
+
   data = {
     wholeTime,
     managingTime,
@@ -28,21 +39,7 @@ function handleSubmit(e) {
     gettingClientCost,
     materialCost,
     deliveryCost,
-  }
-
-  const producingTime = () => 
-        wholeTime 
-        - managingTime 
-        - developmentTime;
-  const productsPerMonth = () => producingTime() - hoursPerProduct;
-  const incomBrutto = () => productsPerMonth() * productPrice;
-  const costOfRunningCompany = () => tax + constantCost;
-  const incomNetto = () => 
-        incomBrutto() 
-        - costOfRunningCompany() 
-        - (gettingClientCost * productsPerMonth())
-        - (materialCost * productsPerMonth())
-        - (deliveryCost * productsPerMonth());  
+  };
 
   data.producingTime = producingTime();
   data.productsPerMonth = productsPerMonth();
@@ -51,28 +48,28 @@ function handleSubmit(e) {
   data.incomNetto = incomNetto();
 
   if (
-  !data.producingTime ||
-  !data.productsPerMonth ||
-  !data.incomBrutto ||
-  !data.costOfRunningCompany ||
-  !data.incomNetto 
-  ) {  
+    !data.producingTime ||
+    !data.productsPerMonth ||
+    !data.incomBrutto ||
+    !data.costOfRunningCompany ||
+    !data.incomNetto
+  ) {
     notificationFrontSpan.textContent = blancInputNotif;
-    allOutputs.forEach(el => el.textContent = noDataNotif);
-    return
-    }
-    productsPerMonthOutput.textContent = productsPerMonth();
-    incomeBruttoOutput.textContent = incomBrutto();
-    costOfRunningCompanyOutput.textContent = costOfRunningCompany();
-    incomeNettoOutput.textContent = incomNetto();
+    allOutputs.forEach((el) => (el.textContent = noDataNotif));
+    return;
+  }
+  productsPerMonthOutput.textContent = productsPerMonth();
+  incomeBruttoOutput.textContent = incomBrutto();
+  costOfRunningCompanyOutput.textContent = costOfRunningCompany();
+  incomeNettoOutput.textContent = incomNetto();
 }
 
 function mirrorStateToLocalStorage() {
-  const nameInput = ""; 
-  if(data) {
+  const nameInput = "";
+  if (data) {
     data.name = nameInput;
     dataStore.push(data);
-    localStorage.setItem('state', JSON.stringify(dataStore));
+    localStorage.setItem("state", JSON.stringify(dataStore));
   }
 }
 
